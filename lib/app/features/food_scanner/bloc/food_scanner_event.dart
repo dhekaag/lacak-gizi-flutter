@@ -7,4 +7,15 @@ sealed class FoodScannerEvent extends Equatable {
   List<Object> get props => [];
 }
 
-class InitializeCamera extends FoodScannerEvent {}
+class InitializeCameraEvent extends FoodScannerEvent {}
+
+class TakePictureEvent extends FoodScannerEvent {
+  final XFile imagePath;
+
+  const TakePictureEvent(this.imagePath);
+
+  @override
+  List<Object> get props => [imagePath];
+}
+
+class PickImageEvent extends FoodScannerEvent {}

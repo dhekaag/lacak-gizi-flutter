@@ -12,12 +12,21 @@ final class FoodScannerInitial extends FoodScannerState {}
 class FoodScannerLoading extends FoodScannerState {}
 
 class FoodScannerInitialized extends FoodScannerState {
-  final CameraController controller;
+  final CameraController cameraController;
 
-  const FoodScannerInitialized(this.controller);
+  const FoodScannerInitialized(this.cameraController);
 
   @override
-  List<Object> get props => [controller];
+  List<Object> get props => [cameraController];
+}
+
+class FoodScannerImagePicked extends FoodScannerState {
+  final File image;
+
+  const FoodScannerImagePicked(this.image);
+
+  @override
+  List<Object> get props => [image];
 }
 
 class FoodScannerError extends FoodScannerState {

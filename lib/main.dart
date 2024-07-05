@@ -32,7 +32,7 @@ class LacakGiziApp extends StatelessWidget {
 void _setDarkMode() {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
     statusBarColor: Colors.transparent,
-    statusBarIconBrightness: Brightness.dark,
+    statusBarIconBrightness: Brightness.light,
     systemNavigationBarColor: Colors.black,
     systemNavigationBarIconBrightness: Brightness.light,
   ));
